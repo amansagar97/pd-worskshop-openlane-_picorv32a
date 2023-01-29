@@ -16,6 +16,7 @@ FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC
 * Programmable Interconnects — To implement routing.
 * Programmable I/O Blocks    — To connect with external components.
 
+
 We are focusing on the implementation of the logic functions, which comes within the Processor/SoC. 
 
 # About RTL to GDSII Flow
