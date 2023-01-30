@@ -1671,7 +1671,7 @@ Generated layout
 
 # Inquires
 
-[Abhishek Ranjan](https://www.linkedin.com/in/abhishek-ranjan-3b5009195)
+[AMAN SAGAR ]([https://www.linkedin.com/in/aman-sagar-vlsi])
 
 
 
