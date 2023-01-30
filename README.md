@@ -2,13 +2,53 @@
 The following repository consists of steps followed while doing the Advanced Physical Design Using OpenLANE/SKY130 workshop. The workshop focuses on the complete ASIC flow approach from RTL2GDS using open soucrce EDA tools such as OpenLANE/SKY130. RISC-V architechture is followed for designing the the core of PICORV32A.
 
 # Table of Content
-
-* INTRODUCTION
-* About RTL to GDSII Flow
-* SKYWater130 PDK
-* OpenLANE
-* Tools Used
-* AIM
+  * Introduction to FPGA
+  * [About RTL to GDSII Flow](#about-rtl-to-gdsii-flow)
+  * [SKYWater130 PDK](#skywater130-pdk)
+  * [OpenLANE](#openlane)
+  * [Tools Used](#tools-used)
+  * [AIM](#aim)
+  * [Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](#day-1---inception-of-open-source-eda-openlane-and-sky130-pdk)
+    - [How to talk to computers](#how-to-talk-to-computers)
+      - [IC Terminologies](#ic-terminologies)
+      - [Introduction to RISC-V](#introduction-to-risc-v)
+        * [RISC-V Characterstics](#risc-v-characterstics)
+      - [Software to Hardware](#software-to-hardware)
+        * [What happens when we run a program?](#what-happens-when-we-run-a-program)
+        * [How does an application run on a computer?](#how-does-an-application-run-on-a-computer)
+    - [SoC design and OpenLane](#soc-design-and-openlane)
+       - [Introduction to Digital Design](#introduction-to-digital-design)
+         * [What is a PDK?](what-is-a-pdk?)
+         * [Environment Setup](#environment-setup)
+       - [Simplified RTL to GDSII Flow](#simplified-rtl-to-gdsii-flow)
+       - [About OpenLANE](#about-openlane)
+    - [Getting familier to open-source EDA tools](#getting-familier-to-open-source-eda-tools)
+       - [Contents of the OpenLANE Directory](#contents-of-the-openlane-directory)
+       - [LAB Day 1](#lab-day-1)
+       - [TASK 1: Finding the d flip flop ratio](#TASK-1-finding-the-d-flip-flop-ratio)
+* [Day 2 - Good floorplan vs bad floorplan and introduction to library cells](#day-1---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
+    - [Chip Floor planning](#chip-floor-planning)
+       - [Utilization factor and aspect ratio](#utilization-factor-and-aspect-ratio)
+       - [Concept of pre-placed cells](#concept-of-pre---placed-cells)
+       - [De-coupling capacitors](#de---coupling-capacitors)
+       - [Power planning](#power-planning)
+       - [Pin Placement and logical cell placement blockage](#pin-placement-and-logical-cell-placement-blockage)
+       - [Placement and routing](#placement-and-routing)
+       - [LAB Day 2](#lab-day-2)
+       - [TASK 2: Calculating area](#task-2-calculating-area)
+* [Day 3 - Design library cell using Magic Layout and ngspice characterization](#day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
+   - [LAB Day 3](#lab-day-3)
+   - [Labs for CMOS inverter ngspice simulations](#labs-for-cmos-inverter-ngspice-simulations)
+       - [Creating SPICE deck](#creating-spice-deck)
+       - [Analysing the inverter](#analysing-the-inverter)
+       - [LAB SETUP](#lab-setup)
+   - [Inception of Layout Â CMOS fabrication process (16 mask process)](#inception-of-layout-Â-CMOS-fabrication-process-(16-mask-process))
+   - [LAB DAY 3 (PART 2)](#labb-day-3(part-2))
+   - [LAB DAY 3 (PART 3)](#labb-day-3(part-3))
+       - [TASK 3: calculating delays and fall time](#task-3-calculating-delays-and-fall-time)
+* [DAY 4 Pre-layout timing analysis and importance of good clock tree](#day-4-pre---layout-timing-analysis-and-importance-of-good-clock-tree)
+   - [Pre-layout timing analysis and importance of good clock tree](#pre-layout-timing-analysis-and-importance-of-good-clock-tree)
+* [DAY 5 - Final step for RTL2GDS]
 
 
 FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC) that is built with a large number of logical processing resources, or logic blocks. These logic blocks consist of digital logic components such as multiplexers, flip-flops, lookup tables, and adders. We can divide the FPGA in three main parts:-
