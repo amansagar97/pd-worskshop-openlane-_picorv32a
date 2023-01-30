@@ -570,7 +570,7 @@ To center the view, press "s" to select whole die then press "v" to center the v
 
 The genrated file is shown below: 
 
-![image](https://user-images.githubusercontent.com/69652104/214947957-92a584f1-e87d-4fcb-a176-dd2f0b992401.png)
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3840).png)
 
 The horizontal and verticle pins:
 
@@ -606,7 +606,7 @@ magic -T /home/nickson/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 The genrated layout:
 
-![image](https://user-images.githubusercontent.com/69652104/215020126-f1327f84-003f-4238-80ea-bd78921117b0.png)
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3841).png)
 
 Placement ensures that the standard cells are correctly placed. 
 PDN is created during floorplan. But is Openlane there is a post floorplan, post placement and CTS is done for PDN.
@@ -764,7 +764,6 @@ To extract it on SPICE, type these command in the tkcon window:
 * create an .ext file - `extract all` (extracted in vsdstdcelldesign folder)
 * We will use this ext file to buide our SPICE file which can be used with the ngspice tool. Doing this will extract all the parasitics  too.
 
-![image](https://user-images.githubusercontent.com/69652104/215221055-ec9e80d7-02c2-4112-bb3d-30871cf4dffa.png)
 
 ```
 ext2spice cthresh 0 rthresh 0 
@@ -868,6 +867,13 @@ The transient plot is shown below:
 
 ![image](https://user-images.githubusercontent.com/69652104/215252884-27d233a9-7183-4a44-b84d-3db002703829.png)
 
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3844).png)
+
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3845).png)
+
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3846).png)
+
+
 Characterisation involves four parameters: 
 1. rise transiton  - time taken by output waveform to transit from 20% to 80% of VDD 
 20% value (0.66) = 2.1829 ns
@@ -914,6 +920,8 @@ input falling (50%)
 Therefore delay = 6.15075 - 6.15 = 0.00075 ns
 
 The above characterisation is done at 27 C.
+
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3852).png)
 
 Next objective is to use this layout of inverter to create a lef file. Using this lef in openlane and plugging this cell we will make a custom cell. We will plug this in picorv32a.
 
@@ -1231,6 +1239,13 @@ run_cts
 ![image](https://user-images.githubusercontent.com/69652104/215315421-c383ede2-99d5-4bda-a659-7f79a625df3c.png)
 
 ![image](https://user-images.githubusercontent.com/69652104/215315691-074d0fb9-917b-4d94-9afc-8d678420695a.png)
+ # spef file
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3847).png)
+
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3848).png)
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3849).png)
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3850).png)
+![image](https://github.com/amansagar97/pd-worskshop-openlane-_picorv32a/blob/main/Screenshot%20(3851).png)
 
 Then check the file which is created. Go to the placements folder under reults and then invoke the magic tool and load the def file. The command is:
 
