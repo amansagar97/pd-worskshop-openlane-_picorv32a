@@ -1671,7 +1671,7 @@ Generated layout
 
 # Inquires
 
-[AMAN SAGAR ]([https://www.linkedin.com/in/aman-sagar-vlsi])
+[AMAN SAGAR ](https://www.linkedin.com/in/aman-sagar-vlsi)
 
 
 
