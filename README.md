@@ -2,7 +2,7 @@
 The following repository consists of steps followed while doing the Advanced Physical Design Using OpenLANE/SKY130 workshop. The workshop focuses on the complete ASIC flow approach from RTL2GDS using open soucrce EDA tools such as OpenLANE/SKY130. RISC-V architechture is followed for designing the the core of PICORV32A.
 
 # Table of Content
-  * Introduction to FPGA(#FPGA)
+  * [Introduction to FPGA](#FPGA)
   * [About RTL to GDSII Flow](#about-rtl-to-gdsii-flow)
   * [SKYWater130 PDK](#skywater130-pdk)
   * [OpenLANE](#openlane)
@@ -48,7 +48,7 @@ The following repository consists of steps followed while doing the Advanced Phy
        - [TASK 3: calculating delays and fall time](#task-3-calculating-delays-and-fall-time)
 * [DAY 4 Pre-layout timing analysis and importance of good clock tree](#day-4-pre---layout-timing-analysis-and-importance-of-good-clock-tree)
    - [Pre-layout timing analysis and importance of good clock tree](#pre-layout-timing-analysis-and-importance-of-good-clock-tree)
-* [DAY 5 - Final step for RTL2GDS]
+* [DAY 5 - Final step for RTL2GDS](#RTL2GDS)
 
 #FPGA
 FPGA, an acronym for Field Programmable Gate Array, is an integrated circuit (IC) that is built with a large number of logical processing resources, or logic blocks. These logic blocks consist of digital logic components such as multiplexers, flip-flops, lookup tables, and adders. We can divide the FPGA in three main parts:-
